@@ -1,0 +1,39 @@
+#include <iostream>
+#include <stdlib.h>
+//UAS PRAKTIKUM B.PEMROGRAMAN 16 JULI 2020
+using namespace std;
+void pembelianDiskon();
+	//deklarasi variable
+	float totalPembelian,totalBelanja,diskon,uangKonsumen;
+int main(){
+	pembelianDiskon();
+	}
+void pembelianDiskon() {
+
+	//minta input dari user total pembelian
+	cout << "\t REZEKI MART \t\n";
+	cout << "SILAHKAN ISI DATA DENGAN TELITI  \n";
+	cout << endl;
+	cout << "Masukkan Total Pembelian Barang = ";
+	cin >> totalPembelian;
+	cout << "Masukan Uang Konsumen = ";
+	cin >> uangKonsumen ;
+	diskon = 0;
+	if (totalPembelian > 500000) {
+		diskon = 0.10 * totalPembelian;	
+	}
+	totalBelanja = totalPembelian - diskon;
+	//membersihkan layar setelah diinput
+	system ("cls");
+	cout << "\t REZEKI MART \t\n";
+	cout << "SILAHKAN ISI DATA DENGAN TELITI  \n";
+	cout << " Total Pembelian = " << totalPembelian;
+	cout << endl;
+	cout << " Total Diskon (10%) = " << diskon;
+	cout <<endl;
+	cout << " Total Pembelian = "<<totalBelanja;
+	cout << endl;
+	cout << " Uang Kembalian = " << uangKonsumen - totalBelanja;
+
+}	
+	
